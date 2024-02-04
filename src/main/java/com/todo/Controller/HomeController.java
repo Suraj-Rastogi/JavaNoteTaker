@@ -96,7 +96,9 @@ public class HomeController {
 	public String deleteNote(@RequestParam String note_id) {
 		//delete note by id from db
 		//open session
-		System.out.println(" note id is=====>"+note_id);
+		System.out.println(" note id is=====>"+note_id); //
+		
+		
 		Session s = SessionProvider.getFactory().openSession();
 		Transaction tx = s.beginTransaction();
 		//get object by id
